@@ -1,0 +1,8 @@
+# PHPUnit
+/phpunit.xml
+
+# IDE
+.idea/*
+
+# Vendor
+vendor/
