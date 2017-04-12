@@ -16,5 +16,3 @@ SDK não oficial da API do vagalume desenvolvida em PHP (https://api.vagalume.co
 [packagist-url]: https://packagist.org/packages/giorgiolucca/vagalume-sdk
 [travis-image]: https://travis-ci.org/giorgiolucca/vagalume-sdk.svg?branch=master
 [travis-url]: https://travis-ci.org/giorgiolucca/vagalume-sdk
-
-[![License](https://poser.pugx.org/giorgiolucca/vagalume-sdk/license)](https://packagist.org/packages/giorgiolucca/vagalume-sdk)
