@@ -6,6 +6,8 @@
     "keywords": ["vagalume","sdk","api"],
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Giorgio Lucca",
@@ -34,5 +36,13 @@
         "psr-4": {
             "VagalumeSdk\\Tests\\": "tests/"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
 }

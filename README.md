@@ -1,6 +1,6 @@
 # VAGALUME SDK
 
-[![Build Status][travis-image]][travis-url] [![License][license-url]][packagist-url]
+[![Build Status][travis-image]][travis-url] [![License][license-url]][packagist-url] [![Packagist](https://img.shields.io/packagist/v/giorgiolucca/vagalume-sdk.svg)][packagist-url] [![Latest Stable Version](https://poser.pugx.org/giorgiolucca/vagalume-sdk/v/stable)][packagist-url]
 
 SDK não oficial da API do vagalume desenvolvida em PHP (https://api.vagalume.com.br/)
 
