@@ -1,6 +1,5 @@
 {
     "name": "giorgiolucca/vagalume-sdk",
-    "version": "1.0.0",
     "homepage": "https://github.com/giorgiolucca/vagalume-sdk",
     "description": "SDK não oficial da API do vagalume desenvolvida em PHP (https://api.vagalume.com.br/)",
     "keywords": ["vagalume","sdk","api"],
