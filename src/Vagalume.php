@@ -11,7 +11,7 @@ use VagalumeSdk\Exception\VagalumeSdkInvalidTypeException;
 use VagalumeSdk\Exception\VagalumeSdkNotFoundException;
 use VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException;
 
-class Vagalume
+class Vagalume implements VagalumeInterface
 {
     private $protectedEndpoint = 'http://api.vagalume.com.br';
     private $publicEndpoint = 'https://www.vagalume.com.br';
@@ -148,6 +148,64 @@ class Vagalume
         }
         return $this->getResponseContent(
             $this->makeProtectedRequest(['q' => rawurlencode($name), 'limit' => $limit], 'search.art')
+        );
+    }
+
+    /**
+     * @param string $excerpt
+     * @param int $limit
+     * @return string
+     * @throws VagalumeSdkNullOrEmptyException
+     */
+    public function searchMusicExcerpt($excerpt = null, $limit = 5)
+    {
+        if (is_null($excerpt) || empty($excerpt)) {
+            throw new VagalumeSdkNullOrEmptyException('Music excerpt is required');
+        }
+        return $this->getResponseContent(
+            $this->makeProtectedRequest(['q' => rawurlencode($excerpt), 'limit' => $limit], 'search.excerpt')
+        );
+    }
+
+    /**
+     * @param string $artistName
+     * @param string $musicName
+     * @param int $limit
+     * @return string
+     * @throws VagalumeSdkNullOrEmptyException
+     */
+    public function searchArtistMusic($artistName = null, $musicName = null, $limit = 5)
+    {
+        if (is_null($artistName) || empty($artistName)) {
+            throw new VagalumeSdkNullOrEmptyException('Artist name is required');
+        }
+
+        if (is_null($musicName) || empty($musicName)) {
+            throw new VagalumeSdkNullOrEmptyException('Music name is required');
+        }
+        return $this->getResponseContent(
+            $this->makeProtectedRequest(
+                [
+                    'q' => rawurlencode(sprintf('%s %s', $artistName, $musicName)),
+                    'limit' => $limit
+                ],
+                'search.artmus'
+            )
+        );
+    }
+
+    /**
+     * @param string $id
+     * @return string
+     * @throws VagalumeSdkNullOrEmptyException
+     */
+    public function searchMusicById($id = null)
+    {
+        if (is_null($id) || empty($id)) {
+            throw new VagalumeSdkNullOrEmptyException('Music ID is required');
+        }
+        return $this->getResponseContent(
+            $this->makeProtectedRequest([ 'musid' => $id ], 'search.php')
         );
     }
 

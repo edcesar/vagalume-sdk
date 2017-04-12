@@ -112,6 +112,34 @@ class VagalumeTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('response', $response);
     }
 
+    public function testMusicExcerpt()
+    {
+        $excerpt = 'Skank Vamos Fugir';
+        $limit = 5;
+        $response = json_decode($this->getSdk()->searchMusicExcerpt($excerpt, $limit), true);
+
+        $this->assertArrayHasKey('response', $response);
+    }
+
+    public function testArtistMusic()
+    {
+        $artistName = 'Skank';
+        $musicName = 'Vamos Fugir';
+        $limit = 5;
+        $response = json_decode($this->getSdk()->searchArtistMusic($artistName, $musicName, $limit), true);
+
+        $this->assertArrayHasKey('response', $response);
+    }
+
+    public function testSearchMusicById()
+    {
+        $artistId = '3ade68b3g1f86eda3';
+        $id = '3ade68b6g4946fda3';
+        $response = json_decode($this->getSdk()->searchMusicById($id), true);
+
+        $this->assertTrue($response['type'] === "exact" && $response['art']['id'] === $artistId);
+    }
+
     /**
      * @return Vagalume
      */
