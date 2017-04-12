@@ -15,7 +15,7 @@ SDK não oficial da API do vagalume desenvolvida em PHP (https://api.vagalume.co
 ## Exemplos
 
 ```sh
-  $apiKey = j8a9dt8a07a7;
+  $apiKey = 'j8a9dt8a07a7';
   $sdk = new VagalumeSdk\Vagalume($apiKey);
   
   // Buscando um artista específico
