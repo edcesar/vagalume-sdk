@@ -109,13 +109,45 @@ class Vagalume
      * @return string
      * @throws VagalumeSdkNullOrEmptyException
      */
-    public function getArtistImage($artistId = null, $limit = 10)
+    public function getArtistImage($artistId = null, $limit = 5)
     {
         if (is_null($artistId) || empty($artistId)) {
             throw new VagalumeSdkNullOrEmptyException('Artist ID is required');
         }
         return $this->getResponseContent(
             $this->makeProtectedRequest(['bandID' => $artistId, 'limit' => $limit], 'image.php')
+        );
+    }
+
+    /**
+     * @param string $name
+     * @param int $limit
+     * @return string
+     * @throws VagalumeSdkNullOrEmptyException
+     */
+    public function searchAlbum($name = null, $limit = 5)
+    {
+        if (is_null($name) || empty($name)) {
+            throw new VagalumeSdkNullOrEmptyException('Album name is required');
+        }
+        return $this->getResponseContent(
+            $this->makeProtectedRequest(['q' => rawurlencode($name), 'limit' => $limit], 'search.alb')
+        );
+    }
+
+    /**
+     * @param string $name
+     * @param int $limit
+     * @return string
+     * @throws VagalumeSdkNullOrEmptyException
+     */
+    public function searchArtist($name = null, $limit = 5)
+    {
+        if (is_null($name) || empty($name)) {
+            throw new VagalumeSdkNullOrEmptyException('Artist name is required');
+        }
+        return $this->getResponseContent(
+            $this->makeProtectedRequest(['q' => rawurlencode($name), 'limit' => $limit], 'search.art')
         );
     }
 

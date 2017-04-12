@@ -94,6 +94,24 @@ class VagalumeTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('images', $response);
     }
 
+    public function testSearchAlbum()
+    {
+        $name = 'U218 Singles&limit=5';
+        $limit = 5;
+        $response = json_decode($this->getSdk()->searchAlbum($name, $limit), true);
+
+        $this->assertArrayHasKey('response', $response);
+    }
+
+    public function testSearchArtist()
+    {
+        $name = 'Skank';
+        $limit = 5;
+        $response = json_decode($this->getSdk()->searchArtist($name, $limit), true);
+
+        $this->assertArrayHasKey('response', $response);
+    }
+
     /**
      * @return Vagalume
      */
