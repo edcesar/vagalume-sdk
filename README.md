@@ -15,8 +15,11 @@ SDK não oficial da API do vagalume desenvolvida em PHP (https://api.vagalume.co
 ## Exemplos
 
 ```sh
+  use GiorgioLucca\VagalumeSdk\Enum\TypeEnum;
+  use GiorgioLucca\VagalumeSdk\Vagalume; 
+   
   $apiKey = 'j8a9dt8a07a7';
-  $sdk = new \VagalumeSdk\Vagalume($apiKey);
+  $sdk = new Vagalume($apiKey);
   
   // Buscando um artista específico
   $artist = $sdk->getArtist('u2');
@@ -31,7 +34,7 @@ SDK não oficial da API do vagalume desenvolvida em PHP (https://api.vagalume.co
   $news = $sdk->getNews();
   
   // Buscando rádios
-  $radios = $sdk->getRadios(\VagalumeSdk\Enum\TypeEnum::ARTIST, 'coca-cola-fm');
+  $radios = $sdk->getRadios(TypeEnum::ARTIST, 'coca-cola-fm');
   
   // Buscando imagem do artista
   $artistId = '3ade68b3gdb86eda3';  
