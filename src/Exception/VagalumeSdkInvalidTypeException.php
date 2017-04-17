@@ -1,6 +1,6 @@
 <?php
 
-namespace VagalumeSdk\Exception;
+namespace GiorgioLucca\VagalumeSdk\Exception;
 
 class VagalumeSdkInvalidTypeException extends \Exception
 {

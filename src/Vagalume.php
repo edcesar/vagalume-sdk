@@ -1,15 +1,15 @@
 <?php
 
-namespace VagalumeSdk;
+namespace GiorgioLucca\VagalumeSdk;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Psr\Http\Message\ResponseInterface;
-use VagalumeSdk\Enum\TypeEnum;
-use VagalumeSdk\Exception\VagalumeSdkException;
-use VagalumeSdk\Exception\VagalumeSdkInvalidTypeException;
-use VagalumeSdk\Exception\VagalumeSdkNotFoundException;
-use VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException;
+use GiorgioLucca\VagalumeSdk\Enum\TypeEnum;
+use GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkException;
+use GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkInvalidTypeException;
+use GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkNotFoundException;
+use GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException;
 
 class Vagalume implements VagalumeInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace VagalumeSdk\Tests;
+namespace GiorgioLucca\VagalumeSdk\Tests;
 
-use VagalumeSdk\Enum\TypeEnum;
-use VagalumeSdk\Vagalume;
+use GiorgioLucca\VagalumeSdk\Enum\TypeEnum;
+use GiorgioLucca\VagalumeSdk\Vagalume;
 
 class VagalumeTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,7 +16,7 @@ class VagalumeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException
+     * @expectedException GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException
      */
     public function testGetArtistWithoutName()
     {
@@ -24,7 +24,7 @@ class VagalumeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException VagalumeSdk\Exception\VagalumeSdkNotFoundException
+     * @expectedException GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkNotFoundException
      */
     public function testGetArtistNotFound()
     {
@@ -68,7 +68,7 @@ class VagalumeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException VagalumeSdk\Exception\VagalumeSdkInvalidTypeException
+     * @expectedException GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkInvalidTypeException
      */
     public function testGetRadiosWithInvalidType()
     {

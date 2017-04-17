@@ -1,6 +1,6 @@
 <?php
 
-namespace VagalumeSdk\Enum;
+namespace GiorgioLucca\VagalumeSdk\Enum;
 
 abstract class PeriodEnum
 {

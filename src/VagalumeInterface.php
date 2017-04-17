@@ -1,9 +1,9 @@
 <?php
 
-namespace VagalumeSdk;
+namespace GiorgioLucca\VagalumeSdk;
 
-use VagalumeSdk\Exception\VagalumeSdkInvalidTypeException;
-use VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException;
+use GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkInvalidTypeException;
+use GiorgioLucca\VagalumeSdk\Exception\VagalumeSdkNullOrEmptyException;
 
 interface VagalumeInterface
 {
